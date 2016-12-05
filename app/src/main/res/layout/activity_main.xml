@@ -3,61 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.MainActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your credentials"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:id="@+id/username">
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:hint="Username"
+            android:nextFocusDown="@+id/usernameEditText"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/colorDivider"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_marginTop="15dp"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:hint="Password"
+            android:nextFocusDown="@+id/passwordEditText"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/colorDivider"
+            android:textSize="20sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:textSize="20dp" />
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorTextIcons"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="Don't have an account? Sign up here!"
+            android:id="@+id/registerTextView"
+            android:layout_gravity="center_horizontal" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/usernameText"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/username"
-        android:id="@+id/password">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:textSize="20dp" />
-
-        <EditText
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/passwordText"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"/>
     </LinearLayout>
 
     <Button

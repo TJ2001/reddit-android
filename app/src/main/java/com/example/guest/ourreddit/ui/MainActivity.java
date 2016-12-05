@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.guest.ourreddit.Constants;
 import com.example.guest.ourreddit.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,12 +27,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SharedPreferences.Editor mEditor;
     private String TAG = MainActivity.class.getSimpleName();
 
+    private DatabaseReference mSearchedLocationReference;
+
     @Bind(R.id.loginButton) Button mLoginButton;
     @Bind(R.id.usernameText) EditText mUsernameText;
     @Bind(R.id.passwordText) EditText mPasswordText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        mSearchedLocationReference = FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child(Constants.FIREBASE_CHILD_USERNAME);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -45,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
         if(v == mLoginButton) {
             String username = mUsernameText.getText().toString();
+
+            saveLocationToFirebase(username);
+
             if(!(username).equals("")) {
                 //logging in for the first time
                 addToSharedPreferences(username);
@@ -64,5 +77,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void addToSharedPreferences(String username){
         mEditor.putString(Constants.PREFERENCES_USERNAME, username).apply();
+    }
+
+    private void saveLocationToFirebase(String username){
+        mSearchedLocationReference.setValue(username);
     }
 }
