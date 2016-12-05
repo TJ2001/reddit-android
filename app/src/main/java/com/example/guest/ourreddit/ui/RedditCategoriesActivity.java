@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.guest.ourreddit.Constants;
 import com.example.guest.ourreddit.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RedditCategoriesActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
@@ -30,7 +31,7 @@ public class RedditCategoriesActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
+        getMenuInflater().inflate(R.menu.menu_main,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -39,12 +40,20 @@ public class RedditCategoriesActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logout:
                 Log.d(TAG, "logging out");
-                startActivity(new Intent(RedditCategoriesActivity.this, MainActivity.class));
                 //TODO clear username preference
                 mSharedPreferences.edit().remove(Constants.PREFERENCES_USERNAME).commit();
+                logout();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(RedditCategoriesActivity.this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 
 }

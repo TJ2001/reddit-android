@@ -2,16 +2,13 @@ package com.example.guest.ourreddit.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.guest.ourreddit.Constants;
@@ -22,16 +19,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
-    private String TAG = MainActivity.class.getSimpleName();
+    private String TAG = LoginActivity.class.getSimpleName();
 
     private DatabaseReference mSearchedLocationReference;
 
     @Bind(R.id.loginButton) Button mLoginButton;
     @Bind(R.id.usernameText) EditText mUsernameText;
     @Bind(R.id.passwordText) EditText mPasswordText;
+    @Bind(R.id.registerTextView) TextView mRegisterTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +40,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .child(Constants.FIREBASE_CHILD_USERNAME);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPreferences.edit();
 
         mLoginButton.setOnClickListener(this);
+        mRegisterTextView.setOnClickListener(this);
     }
 
     @Override
@@ -61,17 +60,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(!(username).equals("")) {
                 //logging in for the first time
                 addToSharedPreferences(username);
-                Intent intent = new Intent(MainActivity.this, RedditCategoriesActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RedditCategoriesActivity.class);
                 startActivity(intent);
             }else if(mSharedPreferences.getString(Constants.PREFERENCES_USERNAME, null) == null){
                 //username was not filled out but we have a preference saved
-                Toast.makeText(MainActivity.this, "Enter a valid username", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Enter a valid username", Toast.LENGTH_SHORT).show();
             }else{
                 //username was stored in preference becasue user has never logged in or we manually logged out
-                Intent intent = new Intent(MainActivity.this, RedditCategoriesActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RedditCategoriesActivity.class);
                 startActivity(intent);
             }
             mUsernameText.setText("");
+        }
+        if (v == mRegisterTextView) {
+            Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 
