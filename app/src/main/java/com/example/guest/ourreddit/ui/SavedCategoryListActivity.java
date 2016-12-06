@@ -26,7 +26,7 @@ public class SavedCategoryListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_reddit);
+        setContentView(R.layout.activity_categories);
         ButterKnife.bind(this);
 
         mCategoryReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_CATEGORIES);

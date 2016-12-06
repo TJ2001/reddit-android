@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class RedditCategoriesActivity extends AppCompatActivity {
+public class CategoriesActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     private String mUserName;
     private FirebaseAuth mAuth;
@@ -35,12 +35,12 @@ public class RedditCategoriesActivity extends AppCompatActivity {
 
     @Bind(R.id.categoryRecyclerView) RecyclerView mRecyclerView;
 
-    private String TAG = RedditCategoriesActivity.class.getSimpleName();
+    private String TAG = CategoriesActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reddit);
+        setContentView(R.layout.activity_categories);
         ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
@@ -84,7 +84,7 @@ public class RedditCategoriesActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_categories,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -97,7 +97,7 @@ public class RedditCategoriesActivity extends AppCompatActivity {
                 return true;
             case R.id.newCategory:
                 Log.d(TAG, "new category");
-                Intent intent = new Intent(RedditCategoriesActivity.this, NewCategoryActivity.class);
+                Intent intent = new Intent(CategoriesActivity.this, NewCategoryActivity.class);
                 startActivity(intent);
                 return true;
         }
@@ -106,7 +106,7 @@ public class RedditCategoriesActivity extends AppCompatActivity {
 
     private void logout() {
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(RedditCategoriesActivity.this, LoginActivity.class);
+        Intent intent = new Intent(CategoriesActivity.this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

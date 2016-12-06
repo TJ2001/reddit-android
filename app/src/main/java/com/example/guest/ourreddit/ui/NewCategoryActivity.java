@@ -39,7 +39,7 @@ public class NewCategoryActivity extends AppCompatActivity implements View.OnCli
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
         String categoryName = mCategoryTextView.getText().toString();
-        mCategory = new Category(categoryName, defaultCategoryImageUrl, uid);
+        mCategory = new Category(categoryName, defaultCategoryImageUrl, uid, null);
         DatabaseReference categoryRef = FirebaseDatabase
                 .getInstance()
                 .getReference(Constants.FIREBASE_CHILD_CATEGORIES);
@@ -48,7 +48,7 @@ public class NewCategoryActivity extends AppCompatActivity implements View.OnCli
         String pushId = pushRef.getKey();
         mCategory.setPushId(pushId);
         pushRef.setValue(mCategory);
-        Intent intent = new Intent(NewCategoryActivity.this, RedditCategoriesActivity.class);
+        Intent intent = new Intent(NewCategoryActivity.this, CategoriesActivity.class);
         startActivity(intent);
     }
 }
