@@ -6,20 +6,34 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.guest.ourreddit.Constants;
 import com.example.guest.ourreddit.R;
+import com.example.guest.ourreddit.adapters.FirebaseCategoryViewHolder;
+import com.example.guest.ourreddit.models.Category;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class RedditCategoriesActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     private String mUserName;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference mCategoryReference;
+    private FirebaseRecyclerAdapter mFirebaseAdapter;
+
+    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
 
     private String TAG = RedditCategoriesActivity.class.getSimpleName();
 
@@ -27,6 +41,7 @@ public class RedditCategoriesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reddit);
+        ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -35,11 +50,12 @@ public class RedditCategoriesActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
-                } else {
-
                 }
             }
         };
+
+        mCategoryReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_CATEGORIES);
+        setUpFirebaseAdapter();
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mUserName = mSharedPreferences.getString(Constants.PREFERENCES_USERNAME, null);
@@ -58,6 +74,12 @@ public class RedditCategoriesActivity extends AppCompatActivity {
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mFirebaseAdapter.cleanup();
     }
 
     @Override
@@ -86,5 +108,22 @@ public class RedditCategoriesActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    private void setUpFirebaseAdapter() {
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<Category, FirebaseCategoryViewHolder>
+                (Category.class, R.layout.category_list_item, FirebaseCategoryViewHolder.class,
+                        mCategoryReference) {
+
+            @Override
+            protected void populateViewHolder(FirebaseCategoryViewHolder viewHolder,
+                                              Category model, int position) {
+                viewHolder.bindCategory(model);
+            }
+        };
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(mFirebaseAdapter);
+    }
+
 
 }

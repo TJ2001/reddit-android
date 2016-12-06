@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.RedditCategoriesActivity" />
-        <activity android:name=".ui.CreateAccountActivity"></activity>
+        <activity android:name=".ui.CreateAccountActivity" />
+        <activity android:name=".ui.SavedCategoryListActivity"></activity>
     </application>
 
 </manifest>

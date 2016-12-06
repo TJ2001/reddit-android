@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_margin="10dp"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageView
 
-    <ImageView
-        android:layout_margin="5dp"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/logo"
-        android:id="@+id/categoryTextView" />
+            android:layout_margin="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/logo"
+            android:id="@+id/categoryImageView" />
 
-    <TextView
-        android:layout_margin="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/restaurantNameTextView"
-        android:textSize="20dp"
-        android:text="Category Name"
-        android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/categoryTextView"
+            android:textSize="20dp"
+            android:text="Category Name"
+            android:textColor="@color/colorPrimaryText"/>
 
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
 </LinearLayout>

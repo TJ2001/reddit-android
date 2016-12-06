@@ -7,6 +7,7 @@ public class Category {
     private String imageUrl;
     private List<Post> posts;
 
+    public Category(){};
     public Category(String name, String imageUrl, List<Post> posts) {
         this.name = name;
         this.imageUrl = imageUrl;
