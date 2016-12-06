@@ -33,7 +33,7 @@ public class RedditCategoriesActivity extends AppCompatActivity {
     private DatabaseReference mCategoryReference;
     private FirebaseRecyclerAdapter mFirebaseAdapter;
 
-    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
+    @Bind(R.id.categoryRecyclerView) RecyclerView mRecyclerView;
 
     private String TAG = RedditCategoriesActivity.class.getSimpleName();
 

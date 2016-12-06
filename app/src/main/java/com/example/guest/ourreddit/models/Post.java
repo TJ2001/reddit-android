@@ -1,19 +1,19 @@
 package com.example.guest.ourreddit.models;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Post {
     private String title;
     private String body;
     private String userName;
-    private List <Comment> comments;
+    private String categoryId;
+    private String userId;
+    private String pushId;
 
-    public Post(String title, String body, String userName, List<Comment> comments) {
+    public Post(String title, String body, String userName, String categoryId, String userId) {
         this.title = title;
         this.body = body;
         this.userName = userName;
-        this.comments = comments;
+        this.categoryId = categoryId;
+        this.userId = userId;
     }
 
     public String getTitle() {
@@ -28,7 +28,7 @@ public class Post {
         return userName;
     }
 
-    public List<Comment> getComments() {
-        return comments;
-    }
+    public String getUserId() { return userId; }
+
+    public String getCategoryId() { return categoryId; }
 }
