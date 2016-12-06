@@ -1,5 +1,8 @@
 package com.example.guest.ourreddit.models;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Category {
     private String name;
     private String imageUrl;
