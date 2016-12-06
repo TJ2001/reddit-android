@@ -21,7 +21,8 @@
         <activity android:name=".ui.CreateAccountActivity" />
         <activity android:name=".ui.SavedCategoryListActivity" />
         <activity android:name=".ui.PostsActivity" />
-        <activity android:name=".ui.NewCategoryActivity"></activity>
+        <activity android:name=".ui.NewCategoryActivity" />
+        <activity android:name=".ui.NewPostActivity"></activity>
     </application>
 
 </manifest>

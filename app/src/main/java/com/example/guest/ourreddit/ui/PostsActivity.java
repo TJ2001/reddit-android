@@ -73,8 +73,8 @@ public class PostsActivity extends AppCompatActivity {
                 return true;
             case R.id.newPost:
                 Log.d(TAG, "new post");
-//                Intent intent = new Intent(PostsActivity.this, NewPostActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(PostsActivity.this, NewPostActivity.class);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);
