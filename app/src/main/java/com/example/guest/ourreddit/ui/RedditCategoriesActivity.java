@@ -93,9 +93,12 @@ public class RedditCategoriesActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logout:
                 Log.d(TAG, "logging out");
-                //TODO clear username preference
-                mSharedPreferences.edit().remove(Constants.PREFERENCES_USERNAME).commit();
                 logout();
+                return true;
+            case R.id.newCategory:
+                Log.d(TAG, "new category");
+                Intent intent = new Intent(RedditCategoriesActivity.this, NewCategoryActivity.class);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

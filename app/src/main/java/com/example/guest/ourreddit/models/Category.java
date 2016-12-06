@@ -1,17 +1,16 @@
 package com.example.guest.ourreddit.models;
 
-import java.util.List;
-
 public class Category {
     private String name;
     private String imageUrl;
-    private List<Post> posts;
+    private String pushId;
+    private String userId;
 
     public Category(){};
-    public Category(String name, String imageUrl, List<Post> posts) {
+    public Category(String name, String imageUrl, String userId) {
         this.name = name;
         this.imageUrl = imageUrl;
-        this.posts = posts;
+        this.userId = userId;
     }
 
     public String getName() {
@@ -22,7 +21,15 @@ public class Category {
         return imageUrl;
     }
 
-    public List<Post> getPosts() {
-        return posts;
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
+    }
+
+    public String getUserId() {
+        return userId;
     }
 }

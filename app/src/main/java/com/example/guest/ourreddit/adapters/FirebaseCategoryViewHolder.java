@@ -1,6 +1,7 @@
 package com.example.guest.ourreddit.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import com.example.guest.ourreddit.Constants;
 import com.example.guest.ourreddit.R;
 import com.example.guest.ourreddit.models.Category;
+import com.example.guest.ourreddit.ui.PostsActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,7 +46,7 @@ public class FirebaseCategoryViewHolder extends RecyclerView.ViewHolder implemen
                 .centerCrop()
                 .into(categoryImageView);
 
-        categoryTextView.setText(category.getName());
+        categoryTextView.setText("r/" + category.getName());
         Log.d(TAG,"got here");
     }
 
@@ -59,8 +61,13 @@ public class FirebaseCategoryViewHolder extends RecyclerView.ViewHolder implemen
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     categories.add(snapshot.getValue(Category.class));
                 }
-
                 int itemPosition = getLayoutPosition();
+
+                Intent intent = new Intent(mContext, PostsActivity.class);
+                intent.putExtra("categoryId", categories.get(itemPosition).getPushId());
+
+                mContext.startActivity(intent);
+
             }
 
             @Override

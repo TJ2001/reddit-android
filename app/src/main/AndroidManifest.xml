@@ -19,7 +19,9 @@
         </activity>
         <activity android:name=".ui.RedditCategoriesActivity" />
         <activity android:name=".ui.CreateAccountActivity" />
-        <activity android:name=".ui.SavedCategoryListActivity"></activity>
+        <activity android:name=".ui.SavedCategoryListActivity" />
+        <activity android:name=".ui.PostsActivity" />
+        <activity android:name=".ui.NewCategoryActivity"></activity>
     </application>
 
 </manifest>

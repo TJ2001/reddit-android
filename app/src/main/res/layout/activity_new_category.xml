@@ -3,17 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.LoginActivity"
+    tools:context="com.example.guest.ourreddit.ui.NewCategoryActivity"
     android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your credentials"
+        android:text="Enter your new Category"
         android:textColor="@color/colorPrimaryLight"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_above="@+id/linearLayout"
+        android:layout_above="@+id/linearLayoutCategory"
         android:layout_centerHorizontal="true" />
 
     <LinearLayout
@@ -23,54 +23,26 @@
         android:padding="30dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayoutCategory">
 
         <EditText
-            android:id="@+id/usernameText"
+            android:id="@+id/categoryNameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
-            android:hint="Email"
-            android:nextFocusDown="@+id/usernameEditText"
+            android:hint="Category Name"
             android:padding="10dp"
-            android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
             android:textColorHint="@color/colorDivider"
             android:textSize="20sp" />
-
-        <EditText
-            android:inputType="textPassword"
-            android:layout_marginTop="15dp"
-            android:id="@+id/passwordText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:hint="Password"
-            android:nextFocusDown="@+id/passwordEditText"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@color/colorDivider"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/colorTextIcons"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:text="Don't have an account? Sign up here!"
-            android:id="@+id/registerTextView"
-            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/loginButton"
+        android:text="Add Category"
+        android:id="@+id/addCategoryButton"
         android:background="@color/colorAccent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
