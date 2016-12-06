@@ -93,14 +93,12 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
     private void createNewUser() {
         mUserName = mNameEditText.getText().toString().trim();
-//        final String name = mNameEditText.getText().toString().trim();
         final String email = mEmailEditText.getText().toString().trim();
         String password = mPasswordEditText.getText().toString().trim();
         String confirmPassword = mConfirmPasswordEditText.getText().toString().trim();
 
         boolean validName = isValidName(mUserName);
         boolean validEmail = isValidEmail(email);
-//        boolean validName = isValidName(name);
         boolean validPassword = isValidPassword(password, confirmPassword);
         if (!validEmail || !validName || !validPassword) return;
 
@@ -167,17 +165,14 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     }
 
     private void createFirebaseUserProfile(final FirebaseUser user) {
-        UserProfileChangeRequest addProfileName = new UserProfileChangeRequest.Builder()
-                .setDisplayName(mUserName)
-                .build();
-        user.updateProfile(addProfileName)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Log.d(TAG, user.getDisplayName());
-                        }
-                    }
-                });
+        UserProfileChangeRequest addProfileName = new UserProfileChangeRequest.Builder().setDisplayName(mUserName).build();
+        user.updateProfile(addProfileName).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Log.d(TAG, user.getDisplayName());
+                }
+            }
+        });
     }
 }
