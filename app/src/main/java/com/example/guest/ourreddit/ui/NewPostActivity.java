@@ -31,7 +31,6 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
     @Bind(R.id.addPostButton) Button mButton;
     private Post mPost;
     private String defaultPostImageUrl = "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +58,13 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
         String pushId = pushRef.getKey();
         mPost.setPushId(pushId);
         pushRef.setValue(mPost);
+
+        pushRef = FirebaseDatabase
+                .getInstance()
+                .getReference(Constants.FIREBASE_CHILD_CATEGORIES)
+                .child(categoryId).child("posts").child(mPost.getPushId());
+        pushRef.setValue(true);
+
         Intent intent = new Intent(NewPostActivity.this, PostsActivity.class);
         intent.putExtra("position", position);
         intent.putExtra("categories", Parcels.wrap(mCategories));

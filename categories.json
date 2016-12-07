@@ -130,28 +130,28 @@
   },
   "posts" : {
     "0" : {
-      "title": "Game post title 0",
+      "title": "Tree post title 0",
       "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
       "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
-      "categoryId" : "1",
-      "pushId": "3"
+      "categoryId" : "0",
+      "pushId": "0"
     },
     "1" : {
-      "title": "Game post title 1",
+      "title": "Tree post title 1",
       "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
       "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
-      "categoryId" : "1",
-      "pushId": "4"
+      "categoryId" : "0",
+      "pushId": "1"
     },
     "2" : {
-      "title": "Game post title 2",
+      "title": "Tree post title 2",
       "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
       "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
-      "categoryId" : "1",
-      "pushId": "5"
+      "categoryId" : "0",
+      "pushId": "2"
     },
     "3" : {
       "title": "Game post title 0",
