@@ -1,0 +1,181 @@
+{
+  "categories" : {
+    "0" : {
+      "name" : "trees",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "0",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : {
+        "0" : true,
+        "1" : true,
+        "2" : true
+      }
+    },
+    "1" : {
+      "name" : "gaming",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "1",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : {
+        "3" : true,
+        "4" : true,
+        "5" : true
+      }
+    },
+    "2" : {
+      "name" : "portland",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "2",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "3" : {
+      "name" : "jokes",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "3",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "4" : {
+      "name" : "funny",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "4",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "5" : {
+      "name" : "movies",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "5",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "6" : {
+      "name" : "zelda",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "6",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "7" : {
+      "name" : "amiibo",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "7",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "8" : {
+      "name" : "dinosaurs",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "8",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "9" : {
+      "name" : "xbox",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "9",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "10" : {
+      "name" : "nintendo",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "10",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "11" : {
+      "name" : "cats",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "11",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "12" : {
+      "name" : "dogs",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "12",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "13" : {
+      "name" : "masseffect",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "13",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "14" : {
+      "name" : "gameofthrones",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "14",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "15" : {
+      "name" : "coffee",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "15",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    },
+    "16" : {
+      "name" : "mrrobot",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "pushId" : "16",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "posts" : null
+    }
+  },
+  "posts" : {
+    "0" : {
+      "title": "Game post title 0",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "categoryId" : "1",
+      "pushId": "3"
+    },
+    "1" : {
+      "title": "Game post title 1",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "categoryId" : "1",
+      "pushId": "4"
+    },
+    "2" : {
+      "title": "Game post title 2",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "categoryId" : "1",
+      "pushId": "5"
+    },
+    "3" : {
+      "title": "Game post title 0",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "categoryId" : "1",
+      "pushId": "3"
+    },
+    "4" : {
+      "title": "Game post title 1",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "categoryId" : "1",
+      "pushId": "4"
+    },
+    "5" : {
+      "title": "Game post title 2",
+      "imageUrl" : "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-128.png",
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "userId" : "HZlAzSn5dfhf2FUAms9yscVWszf2",
+      "categoryId" : "1",
+      "pushId": "5"
+    }
+  }
+}

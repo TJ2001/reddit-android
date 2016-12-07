@@ -6,17 +6,15 @@ import org.parceler.Parcel;
 public class Post {
     private String title;
     private String body;
-    private String userName;
     private String categoryId;
     private String userId;
     private String pushId;
     private String imageUrl;
 
     public Post(){};
-    public Post(String title, String body, String userName, String categoryId, String userId, String imageUrl) {
+    public Post(String title, String body, String categoryId, String userId, String imageUrl) {
         this.title = title;
         this.body = body;
-        this.userName = userName;
         this.categoryId = categoryId;
         this.userId = userId;
         this.imageUrl = imageUrl;
@@ -30,10 +28,6 @@ public class Post {
         return body;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
     public String getUserId() { return userId; }
 
     public String getCategoryId() { return categoryId; }
@@ -44,5 +38,9 @@ public class Post {
 
     public String getPushId() {
         return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
     }
 }

@@ -39,7 +39,7 @@ public class NewCategoryActivity extends AppCompatActivity implements View.OnCli
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
         String categoryName = mCategoryTextView.getText().toString();
-        mCategory = new Category(categoryName, defaultCategoryImageUrl, uid, null);
+        mCategory = new Category(categoryName, defaultCategoryImageUrl, uid);
         DatabaseReference categoryRef = FirebaseDatabase
                 .getInstance()
                 .getReference(Constants.FIREBASE_CHILD_CATEGORIES);

@@ -3,7 +3,6 @@ package com.example.guest.ourreddit.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
@@ -12,7 +11,6 @@ import android.view.MenuItem;
 import com.example.guest.ourreddit.R;
 import com.example.guest.ourreddit.adapters.PostListAdapter;
 import com.example.guest.ourreddit.models.Category;
-import com.example.guest.ourreddit.models.Post;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
@@ -35,8 +33,6 @@ public class PostsActivity extends AppCompatActivity {
     @Bind(R.id.postRecyclerView) RecyclerView mRecyclerView;
     private PostListAdapter mAdapter;
 
-    private ArrayList<Post> mPosts = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +45,11 @@ public class PostsActivity extends AppCompatActivity {
         mCategories = Parcels.unwrap(intent.getParcelableExtra("categories"));
         Category category = mCategories.get(position);
         setTitle("r/" + category.getName());
-        mPosts = (ArrayList<Post>) category.getPosts();
-        mAdapter = new PostListAdapter(getApplicationContext(), mPosts);
-        mRecyclerView.setAdapter(mAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(PostsActivity.this);
-        mRecyclerView.setLayoutManager(layoutManager);
-        mRecyclerView.setHasFixedSize(true);
+//        mAdapter = new PostListAdapter(getApplicationContext(), mPosts);
+//        mRecyclerView.setAdapter(mAdapter);
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(PostsActivity.this);
+//        mRecyclerView.setLayoutManager(layoutManager);
+//        mRecyclerView.setHasFixedSize(true);
     }
 
 
@@ -74,6 +69,8 @@ public class PostsActivity extends AppCompatActivity {
             case R.id.newPost:
                 Log.d(TAG, "new post");
                 Intent intent = new Intent(PostsActivity.this, NewPostActivity.class);
+                intent.putExtra("position", position);
+                intent.putExtra("categories", Parcels.wrap(mCategories));
                 startActivity(intent);
                 return true;
         }
@@ -83,6 +80,7 @@ public class PostsActivity extends AppCompatActivity {
     private void logout() {
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(PostsActivity.this, LoginActivity.class);
+        intent.putExtra("position", position);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
